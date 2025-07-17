@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ConvertWordToPDF.in</title>
+    <meta name="description" content="Frequently asked questions about our Word to PDF conversion service. Get answers about file formats, security, and more.">
+    <meta name="keywords" content="word to pdf faq, docx to pdf questions, pdf converter help, word to pdf troubleshooting">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ConvertWordToPDF.in">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Same CSS as your main page */
+        :root {
+            --primary-color: #0575e6;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b4a;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #fff;
+            --dark-blue: #021b79;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --success-color: #28a745;
+            --error-color: #dc3545;
+        }
+        
+        /* FAQ Specific Styles */
+        .faq-container {
+            margin: 2rem 0;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-question:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+        
+        .contact-prompt {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-prompt h2 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Keep all other styles identical to main page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--secondary-color);
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            box-shadow: var(--shadow);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.8rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+            opacity: 0.9;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--white);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 5rem 5% 8rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--secondary-color);
+            transform: skewY(-3deg);
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+            padding: 0 1rem;
+        }
+        
+        .seo-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 5%;
+        }
+        
+        .seo-content article {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .seo-content h1, .seo-content h2, .seo-content h3, .seo-content h4 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .seo-content p, .seo-content li {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .seo-content ul, .seo-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            min-width: 180px;
+        }
+        
+        .btn:hover {
+            background-color: #0468cf;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--dark-blue);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 2rem;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 0.8rem 3%;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .seo-content {
+                padding: 0 3%;
+            }
+            
+            .hero {
+                padding: 4rem 3% 6rem;
+            }
+            
+            .hero::before {
+                height: 80px;
+                bottom: -40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ConvertWordToPDF.in</a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    
+    <section class="hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about our Word to PDF conversion service</p>
+    </section>
+    
+    <section class="seo-content">
+        <article>
+            <h2>Common Questions</h2>
+            <p>Here are answers to the most frequently asked questions about our Word to PDF converter. If you don't find what you're looking for, please contact us.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is your Word to PDF converter free to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our service is completely free to use. You can convert unlimited Word documents to PDF without any charges or hidden fees. There's no registration required and no watermarks added to your PDF files.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What Word file formats do you support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support all common Microsoft Word formats including:</p>
+                        <ul>
+                            <li>.doc (Word 97-2003 documents)</li>
+                            <li>.docx (Word 2007 and later documents)</li>
+                            <li>.rtf (Rich Text Format)</li>
+                            <li>.odt (OpenDocument Text)</li>
+                            <li>.txt (Plain text files)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a file size limit for conversion?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our free service currently supports files up to 50MB in size. For larger files, we recommend compressing images within your Word document before conversion or splitting the document into smaller parts.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How secure is my document during conversion?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We take your privacy seriously. All file conversions are performed securely in your browser (client-side) when possible. For larger files that require server processing, your files are automatically deleted from our servers within 1 hour of conversion.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Does the converter preserve formatting?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our converter maintains the original formatting of your Word document including:</p>
+                        <ul>
+                            <li>Font styles and sizes</li>
+                            <li>Paragraph spacing and alignment</li>
+                            <li>Tables and columns</li>
+                            <li>Images and charts</li>
+                            <li>Headers and footers</li>
+                            <li>Hyperlinks</li>
+                        </ul>
+                        <p>For best results, use standard fonts that are available across different systems.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I convert multiple Word files at once?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, our free version supports single file conversion. For batch processing of multiple files, you can convert them one by one or consider our premium service (coming soon) that will offer batch conversion capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you store my converted files?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, we don't permanently store your original Word files or the converted PDFs. All files are processed temporarily during conversion and automatically deleted. The PDF is generated for immediate download only.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Why would my conversion fail?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Conversion might fail due to:</p>
+                        <ul>
+                            <li>File size exceeding our limit</li>
+                            <li>Corrupted Word document</li>
+                            <li>Unsupported file format</li>
+                            <li>Password-protected document</li>
+                            <li>Network connectivity issues</li>
+                        </ul>
+                        <p>Try again with a different file or contact us if the problem persists.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-prompt">
+                <h2>Still have questions?</h2>
+                <p>We're here to help! Contact our support team for any additional questions.</p>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </article>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Word to PDF Converter</a></li>
+                    <li><a href="resources.html">PDF Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ConvertWordToPDF.in. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
