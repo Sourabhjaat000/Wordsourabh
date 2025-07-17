@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Resources - ConvertWordToPDF.in</title>
+    <meta name="description" content="Helpful PDF resources, guides, and tools to enhance your document workflow. Learn about PDF editing, compression, and more.">
+    <!-- Same meta tags and CSS as FAQ page -->
+    <style>
+        /* Same CSS as FAQ page plus: */
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .resource-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .resource-icon {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-blue) 100%);
+            color: var(--white);
+            font-size: 2rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .resource-content {
+            padding: 1.5rem;
+        }
+        
+        .resource-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .resource-content p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            color: var(--accent-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .resource-link:hover {
+            color: #e05a3a;
+        }
+        
+        .resource-category {
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ConvertWordToPDF.in</a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resources.html" class="active">Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    
+    <section class="hero">
+        <h1>PDF Resources & Tools</h1>
+        <p>Helpful guides and resources to enhance your document workflow</p>
+    </section>
+    
+    <section class="seo-content">
+        <article>
+            <h2>PDF Learning Resources</h2>
+            <p>Explore our collection of free resources to help you work with PDF documents more efficiently. From conversion tools to editing guides, we've got you covered.</p>
+            
+            <h3 class="resource-category">PDF Conversion Guides</h3>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Word to PDF Conversion</h3>
+                        <p>Complete guide to converting Word documents to PDF while preserving formatting and quality.</p>
+                        <a href="#" class="resource-link">Read Guide →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Excel to PDF</h3>
+                        <p>How to convert Excel spreadsheets to PDF with proper page breaks and scaling.</p>
+                        <a href="#" class="resource-link">Learn More →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>PPT to PDF</h3>
+                        <p>Convert PowerPoint presentations to high-quality PDF files with speaker notes.</p>
+                        <a href="#" class="resource-link">View Tips →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="resource-category">PDF Editing & Management</h3>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Edit PDF Files</h3>
+                        <p>Learn how to edit PDF text, images, and pages without expensive software.</p>
+                        <a href="#" class="resource-link">Editing Guide →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Compress PDFs</h3>
+                        <p>Techniques to reduce PDF file size without losing quality for email and web.</p>
+                        <a href="#" class="resource-link">Compression Tips →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-merge"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Merge PDFs</h3>
+                        <p>Combine multiple PDF files into one document with these free tools.</p>
+                        <a href="#" class="resource-link">Merge Tools →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="resource-category">PDF Security & Accessibility</h3>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>PDF Security</h3>
+                        <p>How to protect your PDF documents with passwords and encryption.</p>
+                        <a href="#" class="resource-link">Security Tips →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>Accessible PDFs</h3>
+                        <p>Create PDFs that are accessible to screen readers and compliant with standards.</p>
+                        <a href="#" class="resource-link">Accessibility Guide →</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>OCR Technology</h3>
+                        <p>Convert scanned documents into editable and searchable PDF files.</p>
+                        <a href="#" class="resource-link">OCR Guide →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>PDF Conversion Tips</h2>
+            <p>Get the most out of your document conversions with these professional tips:</p>
+            <ul>
+                <li><strong>Preserve formatting:</strong> Use standard fonts for better compatibility across devices</li>
+                <li><strong>Image quality:</strong> Optimize images before conversion to balance quality and file size</li>
+                <li><strong>Hyperlinks:</strong> Check that all links remain active after conversion</li>
+                <li><strong>Bookmarks:</strong> Convert Word headings to PDF bookmarks for easy navigation</li>
+                <li><strong>File size:</strong> Compress large files before emailing or uploading</li>
+            </ul>
+            
+            <div class="contact-prompt" style="margin-top: 3rem;">
+                <h2>Need Help With PDFs?</h2>
+                <p>Contact our team for personalized assistance with your document needs.</p>
+                <a href="contact.html" class="btn">Get Help</a>
+            </div>
+        </article>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Word to PDF Converter</a></li>
+                    <li><a href="resources.html">PDF Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 ConvertWordToPDF.in. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
