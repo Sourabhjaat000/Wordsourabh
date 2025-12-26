@@ -1,86 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Superscript Generator Online | Text to Superscript Converter</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Free Superscript Generator online. Convert text to superscript letters and numbers instantly. Copy and paste superscript text easily.">
-<meta name="keywords" content="superscript generator, superscript text generator, text to superscript, superscript converter online, superscript letters, superscript numbers, unicode superscript generator, superscript copy paste">
+<!-- SEO META (USA TARGETED) -->
+<title>Superscript & Subscript Generator Online | Free Text Converter Tool</title>
+<meta name="description" content="Free Superscript and Subscript Generator online. Convert text to superscript or subscript letters and numbers instantly. Copy and paste Unicode text easily on any device.">
+<meta name="keywords" content="superscript generator, subscript generator, text to superscript, text to subscript, superscript text generator, subscript text generator, unicode superscript, unicode subscript, superscript copy paste, subscript copy paste, math superscript generator, chemical subscript generator">
 <meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Superscript Generator Online">
-<meta property="og:description" content="Convert text into superscript letters and numbers instantly using our free tool.">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Superscript Generator">
-<meta name="twitter:description" content="Free online superscript text generator tool.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Schema: WebApplication -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Superscript Generator",
+  "name": "Superscript & Subscript Generator",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "All",
-  "description": "Online tool to convert normal text into superscript letters and numbers.",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   }
-}
-</script>
-
-<!-- Schema: Article -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Superscript Generator – Convert Text to Superscript Online",
-  "author": {
-    "@type": "Organization",
-    "name": "Superscript Generator"
-  }
-}
-</script>
-
-<!-- Schema: FAQ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a superscript generator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A superscript generator converts normal text into raised superscript letters and numbers using Unicode characters."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is this superscript generator free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, this tool is completely free and unlimited."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does superscript text work on social media?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, superscript text works on Instagram, Twitter, WhatsApp, and most modern platforms."
-      }
-    }
-  ]
 }
 </script>
 
@@ -90,6 +32,7 @@
   --secondary:#6366f1;
   --bg:#f8fafc;
   --text:#1f2937;
+  --card:#ffffff;
 }
 
 *{box-sizing:border-box}
@@ -101,19 +44,19 @@ body{
   color:var(--text);
 }
 
-.hero{
+header{
   background:linear-gradient(135deg,var(--primary),var(--secondary));
   color:#fff;
   padding:60px 20px;
   text-align:center;
 }
 
-.hero h1{
-  font-size:clamp(28px,5vw,42px);
+header h1{
+  font-size:clamp(26px,5vw,42px);
   margin-bottom:10px;
 }
 
-.hero p{
+header p{
   max-width:900px;
   margin:auto;
   font-size:18px;
@@ -126,15 +69,37 @@ body{
   padding:20px;
 }
 
-.tool{
-  background:#fff;
+.tool-card{
+  background:var(--card);
   margin-top:-50px;
   padding:25px;
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-textarea,select,button{
+.toggle-group{
+  display:flex;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.toggle-group button{
+  flex:1;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #d1d5db;
+  background:#f1f5f9;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.toggle-group button.active{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+}
+
+textarea, select, button{
   width:100%;
   padding:14px;
   margin-top:15px;
@@ -151,54 +116,34 @@ select{
   border:1px solid #d1d5db;
 }
 
-button{
-  border:none;
+.action-btn{
   background:var(--primary);
   color:#fff;
+  border:none;
   cursor:pointer;
 }
 
-button:hover{opacity:.9}
-
 .output{
-  background:#f1f5f9;
   margin-top:15px;
+  background:#f1f5f9;
   padding:15px;
-  min-height:80px;
   border-radius:12px;
+  min-height:80px;
   font-size:20px;
   word-wrap:break-word;
 }
 
-.copy{
+.copy-btn{
   background:#16a34a;
+  border:none;
+  color:#fff;
+  margin-top:12px;
+  cursor:pointer;
 }
 
-.article{
-  background:#fff;
-  margin-top:50px;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
-  line-height:1.85;
-}
+.copy-btn:hover{opacity:.9}
 
-.article h2{
-  margin-top:40px;
-  font-size:26px;
-}
-
-.article h3{
-  margin-top:25px;
-}
-
-.article strong{
-  background:#eef2ff;
-  padding:2px 6px;
-  border-radius:6px;
-}
-
-.footer{
+footer{
   text-align:center;
   padding:40px 20px;
   font-size:14px;
@@ -206,132 +151,78 @@ button:hover{opacity:.9}
 }
 
 @media(max-width:600px){
-  .hero p{font-size:16px}
-  .article{padding:20px}
+  header p{font-size:16px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>Superscript Generator</h1>
-  <p>Free online <strong>superscript generator</strong> to convert text into superscript letters and numbers instantly.</p>
-</div>
+<header>
+  <h1>Superscript & Subscript Generator</h1>
+  <p>Convert text into superscript or subscript letters and numbers instantly. Free, fast, and mobile-friendly.</p>
+</header>
 
 <div class="container">
 
-<div class="tool">
+<div class="tool-card">
+
+  <!-- TOGGLE -->
+  <div class="toggle-group">
+    <button id="supBtn" class="active" onclick="setMode('sup')">Superscript</button>
+    <button id="subBtn" onclick="setMode('sub')">Subscript</button>
+  </div>
+
   <textarea id="input" placeholder="Enter your text here..."></textarea>
 
   <select id="style">
-    <option value="normal">Standard Superscript</option>
-    <option value="math">Math Superscript</option>
-    <option value="mixed">Fancy Superscript</option>
+    <option value="standard">Standard Style</option>
+    <option value="math">Math / Science Style</option>
+    <option value="fancy">Fancy / Social Style</option>
   </select>
 
-  <button onclick="generate()">Generate Superscript</button>
+  <button class="action-btn" onclick="convert()">Generate</button>
 
   <div class="output" id="output"></div>
 
-  <button class="copy" onclick="copyText()">Copy Superscript</button>
-</div>
-
-<div class="article">
-
-<h2>What Is a Superscript Generator?</h2>
-<p>
-A <strong>superscript generator</strong> is an online tool that converts normal text into raised
-Unicode characters known as superscripts. These characters appear slightly above the baseline
-and are commonly used in mathematics, chemistry, academic writing, and modern digital content.
-</p>
-
-<h2>Superscript Text Generator for USA Users</h2>
-<p>
-Users in the United States frequently search for a fast and reliable
-<strong>superscript text generator</strong> to format equations, references, and social media text.
-This tool works on all devices including Windows, Mac, Android, and iPhone.
-</p>
-
-<h2>Text to Superscript – How It Works</h2>
-<p>
-Our <strong>text to superscript converter</strong> replaces standard letters and numbers with
-their Unicode superscript equivalents. Unlike font-based styling, Unicode superscript text can
-be copied and pasted anywhere without breaking formatting.
-</p>
-
-<h2>Superscript Letters and Numbers</h2>
-<p>
-This <strong>superscript converter online</strong> supports most commonly used superscript letters
-and numbers such as ¹ ² ³ ⁴ ⁿ ᵃ ᵉ ᵗ. Unsupported characters remain unchanged to preserve readability.
-</p>
-
-<h2>Math Superscript Generator</h2>
-<p>
-Students and educators use a <strong>math superscript generator</strong> for equations like
-x², 10³, and a⁴. This tool generates accurate superscript numbers suitable for assignments,
-documents, and online platforms.
-</p>
-
-<h2>Superscript Generator Copy and Paste</h2>
-<p>
-This tool allows instant <strong>superscript generator copy and paste</strong> functionality.
-Simply generate your text and copy it with one click. No ads, no login, no limits.
-</p>
-
-<h2>Superscript for Social Media</h2>
-<p>
-Many creators use <strong>superscript text for Instagram bio</strong>, Twitter names,
-TikTok captions, and Discord usernames. Superscript characters work on most modern platforms
-and help profiles stand out.
-</p>
-
-<h2>Is This Unicode Superscript Generator Safe?</h2>
-<p>
-Yes. This <strong>unicode superscript generator</strong> runs entirely in your browser.
-No data is stored or transmitted, making it safe and privacy-friendly.
-</p>
-
-<h2>Frequently Asked Questions</h2>
-<p><strong>Is this superscript generator free?</strong><br>
-Yes, it is 100% free with unlimited usage.</p>
-
-<p><strong>Does superscript text affect SEO?</strong><br>
-Superscript text does not negatively impact SEO when used properly.</p>
-
-<p><strong>Does it work on mobile?</strong><br>
-Yes, this tool is fully mobile-friendly and responsive.</p>
+  <button class="copy-btn" onclick="copyText()">Copy Result</button>
 
 </div>
 
-<div class="footer">
-© 2025 Superscript Generator · Free Online Tool
-</div>
+<footer>
+© 2025 Superscript & Subscript Generator · Free Online Tool
+</footer>
 
 </div>
 
 <script>
-const maps={
-normal:{
+let mode="sup";
+
+function setMode(m){
+  mode=m;
+  document.getElementById("supBtn").classList.toggle("active",m==="sup");
+  document.getElementById("subBtn").classList.toggle("active",m==="sub");
+}
+
+const supMap={
 'a':'ᵃ','b':'ᵇ','c':'ᶜ','d':'ᵈ','e':'ᵉ','f':'ᶠ','g':'ᵍ','h':'ʰ',
 'i':'ⁱ','j':'ʲ','k':'ᵏ','l':'ˡ','m':'ᵐ','n':'ⁿ','o':'ᵒ','p':'ᵖ',
 'r':'ʳ','s':'ˢ','t':'ᵗ','u':'ᵘ','v':'ᵛ','w':'ʷ','x':'ˣ','y':'ʸ','z':'ᶻ',
 '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'
-},
-math:{
-'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'
-},
-mixed:{
-'a':'ᵃ','e':'ᵉ','i':'ⁱ','o':'ᵒ','u':'ᵘ','n':'ⁿ','r':'ʳ','s':'ˢ','t':'ᵗ'
-}
 };
 
-function generate(){
+const subMap={
+'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉',
+'a':'ₐ','e':'ₑ','h':'ₕ','i':'ᵢ','j':'ⱼ','k':'ₖ','l':'ₗ','m':'ₘ','n':'ₙ',
+'o':'ₒ','p':'ₚ','r':'ᵣ','s':'ₛ','t':'ₜ','u':'ᵤ','v':'ᵥ','x':'ₓ'
+};
+
+function convert(){
   const text=document.getElementById("input").value;
-  const style=document.getElementById("style").value;
+  let map=mode==="sup"?supMap:subMap;
   let out="";
   for(let c of text){
-    out+=maps[style][c]||c;
+    out+=map[c]||c;
   }
   document.getElementById("output").innerText=out;
 }
