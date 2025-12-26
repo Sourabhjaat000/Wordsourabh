@@ -3,26 +3,21 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- SEO META (USA TARGETED) -->
-<title>Superscript & Subscript Generator Online | Free Text Converter Tool</title>
-<meta name="description" content="Free Superscript and Subscript Generator online. Convert text to superscript or subscript letters and numbers instantly. Copy and paste Unicode text easily on any device.">
-<meta name="keywords" content="superscript generator, subscript generator, text to superscript, text to subscript, superscript text generator, subscript text generator, unicode superscript, unicode subscript, superscript copy paste, subscript copy paste, math superscript generator, chemical subscript generator">
+<title>Superscript & Subscript Generator Online | Free Unicode Text Tool</title>
+<meta name="description" content="Free Superscript and Subscript Generator online. Convert text to superscript or subscript letters and numbers instantly. Includes Unicode tables and copy paste tool.">
+<meta name="keywords" content="superscript generator, subscript generator, unicode superscript, unicode subscript, text to superscript, text to subscript, superscript copy paste, math superscript generator, chemical subscript generator">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Schema: WebApplication -->
+<!-- Schema -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Superscript & Subscript Generator",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "All",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Superscript & Subscript Generator",
+  "applicationCategory":"UtilityApplication",
+  "operatingSystem":"All",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
 }
 </script>
 
@@ -64,36 +59,35 @@ header p{
 }
 
 .container{
-  max-width:1150px;
+  max-width:1200px;
   margin:auto;
   padding:20px;
 }
 
-.tool-card{
+.card{
   background:var(--card);
-  margin-top:-50px;
   padding:25px;
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,.08);
+  margin-top:-50px;
 }
 
-.toggle-group{
+.toggle{
   display:flex;
   gap:10px;
-  margin-bottom:15px;
 }
 
-.toggle-group button{
+.toggle button{
   flex:1;
   padding:12px;
   border-radius:12px;
   border:1px solid #d1d5db;
   background:#f1f5f9;
-  cursor:pointer;
   font-weight:600;
+  cursor:pointer;
 }
 
-.toggle-group button.active{
+.toggle button.active{
   background:var(--primary);
   color:#fff;
   border:none;
@@ -107,16 +101,10 @@ textarea, select, button{
   font-size:16px;
 }
 
-textarea{
-  border:1px solid #d1d5db;
-  min-height:120px;
-}
+textarea{border:1px solid #d1d5db;min-height:120px}
+select{border:1px solid #d1d5db}
 
-select{
-  border:1px solid #d1d5db;
-}
-
-.action-btn{
+button.primary{
   background:var(--primary);
   color:#fff;
   border:none;
@@ -130,28 +118,40 @@ select{
   border-radius:12px;
   min-height:80px;
   font-size:20px;
-  word-wrap:break-word;
 }
 
-.copy-btn{
+.copy{
   background:#16a34a;
-  border:none;
   color:#fff;
+  border:none;
   margin-top:12px;
-  cursor:pointer;
 }
 
-.copy-btn:hover{opacity:.9}
+.article{
+  background:#fff;
+  margin-top:50px;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  line-height:1.9;
+}
+
+.article h2{margin-top:40px}
+.article table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+.article th,.article td{
+  border:1px solid #ddd;
+  padding:10px;
+  text-align:center;
+}
 
 footer{
   text-align:center;
   padding:40px 20px;
-  font-size:14px;
   color:#6b7280;
-}
-
-@media(max-width:600px){
-  header p{font-size:16px}
 }
 </style>
 </head>
@@ -159,38 +159,104 @@ footer{
 <body>
 
 <header>
-  <h1>Superscript & Subscript Generator</h1>
-  <p>Convert text into superscript or subscript letters and numbers instantly. Free, fast, and mobile-friendly.</p>
+<h1>Superscript & Subscript Generator</h1>
+<p>Free online tool to convert text into superscript or subscript Unicode characters with 100+ text varieties.</p>
 </header>
 
 <div class="container">
 
-<div class="tool-card">
+<div class="card">
 
-  <!-- TOGGLE -->
-  <div class="toggle-group">
-    <button id="supBtn" class="active" onclick="setMode('sup')">Superscript</button>
-    <button id="subBtn" onclick="setMode('sub')">Subscript</button>
-  </div>
+<div class="toggle">
+  <button id="supBtn" class="active" onclick="setMode('sup')">Superscript</button>
+  <button id="subBtn" onclick="setMode('sub')">Subscript</button>
+</div>
 
-  <textarea id="input" placeholder="Enter your text here..."></textarea>
+<textarea id="input" placeholder="Enter text here..."></textarea>
 
-  <select id="style">
-    <option value="standard">Standard Style</option>
-    <option value="math">Math / Science Style</option>
-    <option value="fancy">Fancy / Social Style</option>
-  </select>
+<select id="style">
+  <option value="standard">Standard</option>
+  <option value="math">Math / Science</option>
+  <option value="fancy">Fancy / Social</option>
+</select>
 
-  <button class="action-btn" onclick="convert()">Generate</button>
+<button class="primary" onclick="convert()">Generate</button>
 
-  <div class="output" id="output"></div>
+<div class="output" id="output"></div>
+<button class="copy" onclick="copyText()">Copy Result</button>
 
-  <button class="copy-btn" onclick="copyText()">Copy Result</button>
+</div>
+
+<!-- ARTICLE -->
+<div class="article">
+
+<h2>What Is a Superscript and Subscript Generator?</h2>
+<p>
+A <strong>superscript and subscript generator</strong> is an online Unicode text tool that converts
+normal characters into raised (superscript) or lowered (subscript) forms. These formats are widely
+used in mathematics, chemistry, physics, academic writing, and digital content creation.
+</p>
+
+<h2>Why Use This Unicode Text Tool?</h2>
+<p>
+Instead of learning complex keyboard shortcuts, this tool allows instant conversion using Unicode.
+It supports over <strong>100+ superscript and subscript characters</strong>, making it one of the
+most versatile generators available online.
+</p>
+
+<h2>Superscript Unicode Table</h2>
+<table>
+<tr><th>Character</th><th>Superscript</th></tr>
+<tr><td>0</td><td>⁰</td></tr>
+<tr><td>1</td><td>¹</td></tr>
+<tr><td>2</td><td>²</td></tr>
+<tr><td>3</td><td>³</td></tr>
+<tr><td>4</td><td>⁴</td></tr>
+<tr><td>5</td><td>⁵</td></tr>
+<tr><td>6</td><td>⁶</td></tr>
+<tr><td>7</td><td>⁷</td></tr>
+<tr><td>8</td><td>⁸</td></tr>
+<tr><td>9</td><td>⁹</td></tr>
+<tr><td>a</td><td>ᵃ</td></tr>
+<tr><td>n</td><td>ⁿ</td></tr>
+<tr><td>r</td><td>ʳ</td></tr>
+<tr><td>t</td><td>ᵗ</td></tr>
+</table>
+
+<h2>Subscript Unicode Table</h2>
+<table>
+<tr><th>Character</th><th>Subscript</th></tr>
+<tr><td>0</td><td>₀</td></tr>
+<tr><td>1</td><td>₁</td></tr>
+<tr><td>2</td><td>₂</td></tr>
+<tr><td>3</td><td>₃</td></tr>
+<tr><td>4</td><td>₄</td></tr>
+<tr><td>5</td><td>₅</td></tr>
+<tr><td>6</td><td>₆</td></tr>
+<tr><td>7</td><td>₇</td></tr>
+<tr><td>8</td><td>₈</td></tr>
+<tr><td>9</td><td>₉</td></tr>
+<tr><td>a</td><td>ₐ</td></tr>
+<tr><td>e</td><td>ₑ</td></tr>
+<tr><td>o</td><td>ₒ</td></tr>
+<tr><td>x</td><td>ₓ</td></tr>
+</table>
+
+<h2>Use Cases</h2>
+<p>
+This tool is widely used for mathematical equations (x², 10³), chemical formulas (H₂O, CO₂),
+academic citations, social media bios, and professional documents.
+</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><strong>Is this tool free?</strong> Yes, completely free.</p>
+<p><strong>Does it work on mobile?</strong> Yes, fully responsive.</p>
+<p><strong>Is Unicode safe?</strong> Yes, works on all modern platforms.</p>
 
 </div>
 
 <footer>
-© 2025 Superscript & Subscript Generator · Free Online Tool
+© 2025 Superscript & Subscript Generator · Unicode Text Tool
 </footer>
 
 </div>
