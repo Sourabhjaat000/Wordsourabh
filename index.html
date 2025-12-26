@@ -3,19 +3,57 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<title>Superscript & Subscript Generator Online | Free Unicode Text Tool</title>
-<meta name="description" content="Free Superscript and Subscript Generator online. Convert text to superscript or subscript letters and numbers instantly. Includes Unicode tables and copy paste tool.">
-<meta name="keywords" content="superscript generator, subscript generator, unicode superscript, unicode subscript, text to superscript, text to subscript, superscript copy paste, math superscript generator, chemical subscript generator">
-<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a superscript generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A superscript generator is an online tool that converts normal text into raised Unicode superscript characters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this superscript generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, this superscript generator is completely free with unlimited usage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does superscript text work on mobile devices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Unicode superscript text works on Android and iPhone devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many superscript characters exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unicode supports approximately 55 to 60 real superscript characters including numbers, letters, and symbols."
+      }
+    }
+  ]
+}
+</script>
+<title>Superscript Generator Online | Text to Superscript Converter</title>
+<meta name="description" content="Free Superscript Generator online. Convert text to superscript letters and numbers instantly with live preview. Copy Unicode superscript easily.">
+<meta name="keywords" content="superscript generator, text to superscript, superscript copy paste, unicode superscript">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
 
-<!-- Schema -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebApplication",
-  "name":"Superscript & Subscript Generator",
+  "name":"Superscript Generator",
   "applicationCategory":"UtilityApplication",
   "operatingSystem":"All",
   "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
@@ -24,135 +62,90 @@
 
 <style>
 :root{
-  --primary:#4f46e5;
-  --secondary:#6366f1;
+  --primary:#2563eb;
   --bg:#f8fafc;
-  --text:#1f2937;
   --card:#ffffff;
+  --text:#0f172a;
 }
-
 *{box-sizing:border-box}
-
 body{
   margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,Arial;
+  font-family:system-ui,Segoe UI,Arial;
   background:var(--bg);
   color:var(--text);
 }
-
 header{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  background:linear-gradient(135deg,#2563eb,#1e40af);
   color:#fff;
-  padding:60px 20px;
+  padding:40px 20px;
   text-align:center;
 }
-
-header h1{
-  font-size:clamp(26px,5vw,42px);
-  margin-bottom:10px;
-}
-
-header p{
-  max-width:900px;
-  margin:auto;
-  font-size:18px;
-  opacity:.95;
-}
+header h1{font-size:clamp(28px,5vw,42px)}
+header p{font-size:18px;max-width:850px;margin:auto}
 
 .container{
-  max-width:1200px;
+  max-width:900px;
   margin:auto;
   padding:20px;
 }
-
 .card{
   background:var(--card);
-  padding:25px;
+  margin-top:-40px;
+  padding:28px;
   border-radius:20px;
   box-shadow:0 15px 35px rgba(0,0,0,.08);
-  margin-top:-50px;
 }
-
-.toggle{
-  display:flex;
-  gap:10px;
-}
-
-.toggle button{
-  flex:1;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #d1d5db;
-  background:#f1f5f9;
+label{
   font-weight:600;
-  cursor:pointer;
+  display:block;
+  margin-top:18px;
 }
-
-.toggle button.active{
-  background:var(--primary);
-  color:#fff;
-  border:none;
-}
-
-textarea, select, button{
+textarea,select{
   width:100%;
   padding:14px;
-  margin-top:15px;
-  border-radius:12px;
+  margin-top:8px;
+  border-radius:14px;
+  border:1px solid #c7d2fe;
   font-size:16px;
 }
-
-textarea{border:1px solid #d1d5db;min-height:120px}
-select{border:1px solid #d1d5db}
-
-button.primary{
-  background:var(--primary);
-  color:#fff;
+.output{
+  margin-top:18px;
+  background:#f1f5f9;
+  padding:16px;
+  min-height:80px;
+  border-radius:14px;
+  font-size:22px;
+  word-wrap:break-word;
+}
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+}
+.actions button{
+  flex:1;
+  padding:14px;
+  border-radius:14px;
   border:none;
+  font-size:16px;
   cursor:pointer;
 }
+.copy{background:#16a34a;color:#fff}
+.clear{background:#e5e7eb}
 
-.output{
-  margin-top:15px;
-  background:#f1f5f9;
-  padding:15px;
-  border-radius:12px;
-  min-height:80px;
-  font-size:20px;
-}
-
-.copy{
-  background:#16a34a;
-  color:#fff;
-  border:none;
-  margin-top:12px;
-}
-
-.article{
-  background:#fff;
-  margin-top:50px;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
-  line-height:1.9;
-}
-
-.article h2{margin-top:40px}
-.article table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-}
-.article th,.article td{
-  border:1px solid #ddd;
-  padding:10px;
+.reserve{
+  margin-top:70px;
+  padding:50px 20px;
   text-align:center;
+  color:#64748b;
+  border-top:2px dashed #cbd5f5;
 }
 
 footer{
   text-align:center;
-  padding:40px 20px;
-  color:#6b7280;
+  padding:30px;
+  font-size:14px;
+  color:#64748b;
 }
 </style>
 </head>
@@ -160,143 +153,369 @@ footer{
 <body>
 
 <header>
-<h1>Superscript & Subscript Generator</h1>
-<p>Free online tool to convert text into superscript or subscript Unicode characters with 100+ text varieties.</p>
+  <h1>Superscript Generator</h1>
+  <p>Live text to superscript converter. Type and get instant Unicode superscript output.</p>
 </header>
 
 <div class="container">
 
 <div class="card">
 
-<div class="toggle">
-  <button id="supBtn" class="active" onclick="setMode('sup')">Superscript</button>
-  <button id="subBtn" onclick="setMode('sub')">Subscript</button>
-</div>
+<label>Enter Text</label>
+<textarea id="input" placeholder="Start typing..." oninput="convert()"></textarea>
 
-<textarea id="input" placeholder="Enter text here..."></textarea>
-
-<select id="style">
-  <option value="standard">Standard</option>
-  <option value="math">Math / Science</option>
-  <option value="fancy">Fancy / Social</option>
+<label>Select Superscript Style</label>
+<select id="style" onchange="convert()">
+  <option value="standard">Standard Superscript</option>
+  <option value="math">Math Numbers</option>
+  <option value="small">Small Letters</option>
+  <option value="random">Random Mixed Style</option>
 </select>
 
-<button class="primary" onclick="convert()">Generate</button>
-
+<label>Superscript Output (Live)</label>
 <div class="output" id="output"></div>
-<button class="copy" onclick="copyText()">Copy Result</button>
 
+<div class="actions">
+  <button class="copy" onclick="copyText()">Copy</button>
+  <button class="clear" onclick="clearAll()">Clear</button>
 </div>
 
-<!-- ARTICLE -->
-<div class="article">
-
-<h2>What Is a Superscript and Subscript Generator?</h2>
-<p>
-A <strong>superscript and subscript generator</strong> is an online Unicode text tool that converts
-normal characters into raised (superscript) or lowered (subscript) forms. These formats are widely
-used in mathematics, chemistry, physics, academic writing, and digital content creation.
-</p>
-
-<h2>Why Use This Unicode Text Tool?</h2>
-<p>
-Instead of learning complex keyboard shortcuts, this tool allows instant conversion using Unicode.
-It supports over <strong>100+ superscript and subscript characters</strong>, making it one of the
-most versatile generators available online.
-</p>
-
-<h2>Superscript Unicode Table</h2>
-<table>
-<tr><th>Character</th><th>Superscript</th></tr>
-<tr><td>0</td><td>⁰</td></tr>
-<tr><td>1</td><td>¹</td></tr>
-<tr><td>2</td><td>²</td></tr>
-<tr><td>3</td><td>³</td></tr>
-<tr><td>4</td><td>⁴</td></tr>
-<tr><td>5</td><td>⁵</td></tr>
-<tr><td>6</td><td>⁶</td></tr>
-<tr><td>7</td><td>⁷</td></tr>
-<tr><td>8</td><td>⁸</td></tr>
-<tr><td>9</td><td>⁹</td></tr>
-<tr><td>a</td><td>ᵃ</td></tr>
-<tr><td>n</td><td>ⁿ</td></tr>
-<tr><td>r</td><td>ʳ</td></tr>
-<tr><td>t</td><td>ᵗ</td></tr>
-</table>
-
-<h2>Subscript Unicode Table</h2>
-<table>
-<tr><th>Character</th><th>Subscript</th></tr>
-<tr><td>0</td><td>₀</td></tr>
-<tr><td>1</td><td>₁</td></tr>
-<tr><td>2</td><td>₂</td></tr>
-<tr><td>3</td><td>₃</td></tr>
-<tr><td>4</td><td>₄</td></tr>
-<tr><td>5</td><td>₅</td></tr>
-<tr><td>6</td><td>₆</td></tr>
-<tr><td>7</td><td>₇</td></tr>
-<tr><td>8</td><td>₈</td></tr>
-<tr><td>9</td><td>₉</td></tr>
-<tr><td>a</td><td>ₐ</td></tr>
-<tr><td>e</td><td>ₑ</td></tr>
-<tr><td>o</td><td>ₒ</td></tr>
-<tr><td>x</td><td>ₓ</td></tr>
-</table>
-
-<h2>Use Cases</h2>
-<p>
-This tool is widely used for mathematical equations (x², 10³), chemical formulas (H₂O, CO₂),
-academic citations, social media bios, and professional documents.
-</p>
-
-<h2>Frequently Asked Questions</h2>
-<p><strong>Is this tool free?</strong> Yes, completely free.</p>
-<p><strong>Does it work on mobile?</strong> Yes, fully responsive.</p>
-<p><strong>Is Unicode safe?</strong> Yes, works on all modern platforms.</p>
-
 </div>
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#what-is-superscript">What Is Superscript Text?</a></li>
+    <li><a href="#why-use">Why Use a Superscript Generator?</a></li>
+    <li><a href="#math-science">Superscript for Math & Science</a></li>
+    <li><a href="#unicode">Unicode Superscript Explained</a></li>
+    <li><a href="#copy-paste">Superscript Copy & Paste</a></li>
+    <li><a href="#social-media">Superscript for Social Media</a></li>
+    <li><a href="#seo">Is Superscript SEO Friendly?</a></li>
+    <li><a href="#faq">Frequently Asked Questions</a></li>
+  </ul>
+</div>
+<!-- ARTICLE SPACE -->
+<div class="reserve">
+  <h2>Superscript Generator – Complete Guide to Superscript Text</h2>
+
+<p>
+A <strong>superscript generator</strong> is an online text formatting tool that allows users to convert
+normal text into <strong>superscript letters and numbers</strong>. Superscript characters appear
+slightly above the normal text line and are commonly used in mathematics, science, academic writing,
+engineering, chemistry, professional documentation, and digital content creation.
+</p>
+
+<p>
+This <strong>superscript generator online</strong> is designed specifically for users in the
+<strong>United States</strong> and worldwide who want a fast, reliable, and
+<strong>free text to superscript converter</strong> that works seamlessly on desktop computers,
+laptops, tablets, and mobile devices.
+</p>
+
+<hr>
+
+<h2>What Is Superscript Text?</h2>
+
+<p>
+<strong>Superscript text</strong> consists of characters that are positioned slightly above the
+baseline of normal text. These characters are smaller in size and are widely used to represent
+mathematical exponents, scientific notation, footnotes, and reference markers.
+</p>
+
+<p>
+Examples of superscript text include expressions such as <strong>x²</strong>,
+<strong>10³</strong>, and reference numbers like <strong>¹</strong>. Superscript formatting is
+especially important in academic and scientific communication where precision and clarity are
+critical.
+</p>
+
+<p>
+Unlike visual formatting in word processors, a <strong>Unicode superscript generator</strong>
+produces actual Unicode characters. This means the superscript text can be copied and pasted
+anywhere without losing its formatting.
+</p>
+
+<hr>
+
+<h2>Why Use a Superscript Generator Online?</h2>
+
+<p>
+Many users search for <strong>how to write superscript on keyboard</strong>, but keyboard shortcuts
+vary depending on the operating system and application. For example, Windows, macOS, Android, and
+iOS all use different methods for superscript formatting.
+</p>
+
+<p>
+An online <strong>superscript text generator</strong> eliminates this complexity by providing a
+simple interface where users can instantly convert text to superscript without memorizing shortcuts
+or installing additional software.
+</p>
+
+<ul>
+  <li>No downloads or installations required</li>
+  <li>Works in all modern browsers</li>
+  <li>Compatible with Windows, Mac, Android, and iPhone</li>
+  <li>Instant <strong>superscript copy paste</strong></li>
+  <li>Unlimited free usage</li>
+</ul>
+
+<hr>
+
+<h2>Superscript Generator for Math and Science</h2>
+
+<p>
+One of the most common uses of a <strong>math superscript generator</strong> is in mathematical
+equations and scientific formulas. Superscripts are used to represent powers, indices, and
+exponents.
+</p>
+
+<p>
+Examples include:
+</p>
+
+<ul>
+  <li>x² + y² = z²</li>
+  <li>10³ (ten cubed)</li>
+  <li>aⁿ (a raised to the power of n)</li>
+</ul>
+
+<p>
+This <strong>text to superscript tool</strong> generates accurate Unicode characters that display
+correctly in Google Docs, Microsoft Word, PDFs, and web pages.
+</p>
+
+<hr>
+
+<h2>Superscript Letters and Numbers Explained</h2>
+
+<p>
+A common misconception is that every letter and number has a superscript equivalent. In reality,
+Unicode provides approximately <strong>55–60 real superscript characters</strong>, including
+numbers, selected lowercase letters, some uppercase letters, and a few symbols.
+</p>
+
+<p>
+This superscript generator uses only <strong>real Unicode superscript characters</strong>. When a
+character does not have an official Unicode superscript version, the tool leaves it unchanged to
+maintain readability and accuracy.
+</p>
+
+<p>
+This approach ensures maximum compatibility and avoids broken or fake characters that may not work
+on all platforms.
+</p>
+
+<hr>
+
+<h2>Superscript Generator Copy and Paste</h2>
+
+<p>
+One of the most searched queries in the United States is
+<strong>superscript generator copy paste</strong>. Users want a tool that allows them to generate
+superscript text and copy it instantly.
+</p>
+
+<p>
+This tool provides one-click copy functionality, allowing you to paste the generated superscript
+text into:
+</p>
+
+<ul>
+  <li>Academic assignments</li>
+  <li>Research papers</li>
+  <li>Emails and reports</li>
+  <li>Websites and blogs</li>
+  <li>Social media bios and captions</li>
+</ul>
+
+<hr>
+
+<h2>Superscript Text for Social Media</h2>
+
+<p>
+Many people use a <strong>superscript font generator</strong> to create visually appealing text for
+social media. Superscript characters are often used in Instagram bios, Twitter usernames, and
+Discord nicknames.
+</p>
+
+<p>
+Because Unicode superscript characters are supported by most modern platforms, the generated text
+works reliably on:
+</p>
+
+<ul>
+  <li>Instagram</li>
+  <li>Twitter (X)</li>
+  <li>Facebook</li>
+  <li>WhatsApp</li>
+  <li>Discord</li>
+</ul>
+
+<hr>
+
+<h2>Is This Superscript Generator Free?</h2>
+
+<p>
+Yes. This <strong>free superscript generator</strong> is available to everyone without registration,
+subscriptions, or usage limits. You can convert unlimited text at any time.
+</p>
+
+<hr>
+
+<h2>Is Superscript Text SEO-Friendly?</h2>
+
+<p>
+Superscript text does not harm SEO when used appropriately. However, excessive use of superscript
+characters in normal paragraph text is not recommended.
+</p>
+
+<p>
+Best practices include:
+</p>
+
+<ul>
+  <li>Use superscript for equations, references, or footnotes</li>
+  <li>Avoid replacing entire sentences with superscript text</li>
+  <li>Maintain readability for users and search engines</li>
+</ul>
+
+<hr>
+
+<h2>Who Uses Superscript Generators?</h2>
+
+<p>
+A <strong>superscript generator online</strong> is used by a wide range of people, including:
+</p>
+
+<ul>
+  <li>Students and teachers</li>
+  <li>Researchers and scientists</li>
+  <li>Engineers and developers</li>
+  <li>Bloggers and writers</li>
+  <li>Social media creators</li>
+</ul>
+
+<hr>
+<h2>Quick Answers About Superscript Generator</h2>
+
+<h3>What does superscript mean?</h3>
+<p>
+Superscript means text that appears smaller and slightly above the normal text line.
+It is commonly used for exponents, footnotes, and scientific notation.
+</p>
+
+<h3>How do I convert text to superscript?</h3>
+<p>
+You can convert text to superscript by using an online superscript generator that
+replaces normal characters with Unicode superscript characters.
+</p>
+
+<h3>Is superscript the same as exponent?</h3>
+<p>
+In mathematics, superscript is often used to represent exponents, but superscript
+can also be used for references, notes, and formatting.
+</p>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<h3>What is a superscript generator?</h3>
+<p>
+A superscript generator is an online tool that converts normal text into raised Unicode superscript
+characters.
+</p>
+
+<h3>Is this superscript generator free to use?</h3>
+<p>
+Yes, it is completely free with unlimited usage.
+</p>
+
+<h3>Does superscript text work on mobile devices?</h3>
+<p>
+Yes. Unicode superscript characters work on both Android and iPhone devices.
+</p>
+
+<h3>Can I use superscript text on Instagram?</h3>
+<p>
+Yes. Superscript text works on Instagram bios, captions, and comments.
+</p>
+
+<h3>Does this tool store my data?</h3>
+<p>
+No. All text conversion happens locally in your browser. No data is saved or transmitted.
+</p>
+
+<hr>
+
+<h2>Final Thoughts</h2>
+
+<p>
+If you are looking for a reliable <strong>superscript generator</strong>, this tool provides a clean,
+fast, and professional solution. It is ideal for academic, scientific, professional, and creative
+use cases.
+</p>
+
+<p>
+Bookmark this page and use it whenever you need a trusted
+<strong>text to superscript converter</strong>.
+</p>
+</div>
+<h2>Why Trust This Superscript Generator?</h2>
+
+<ul>
+  <li>No fake or broken Unicode characters</li>
+  <li>Uses only real Unicode superscript symbols</li>
+  <li>No data collection or tracking</li>
+  <li>Works offline once loaded</li>
+  <li>Designed for students, educators, and professionals</li>
+</ul>
 
 <footer>
-© 2025 Superscript & Subscript Generator · Unicode Text Tool
+© 2025 Superscript Generator · Free Online Tool
 </footer>
 
 </div>
 
 <script>
-let mode="sup";
-
-function setMode(m){
-  mode=m;
-  document.getElementById("supBtn").classList.toggle("active",m==="sup");
-  document.getElementById("subBtn").classList.toggle("active",m==="sub");
-}
-
-const supMap={
-'a':'ᵃ','b':'ᵇ','c':'ᶜ','d':'ᵈ','e':'ᵉ','f':'ᶠ','g':'ᵍ','h':'ʰ',
-'i':'ⁱ','j':'ʲ','k':'ᵏ','l':'ˡ','m':'ᵐ','n':'ⁿ','o':'ᵒ','p':'ᵖ',
-'r':'ʳ','s':'ˢ','t':'ᵗ','u':'ᵘ','v':'ᵛ','w':'ʷ','x':'ˣ','y':'ʸ','z':'ᶻ',
-'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'
-};
-
-const subMap={
-'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉',
-'a':'ₐ','e':'ₑ','h':'ₕ','i':'ᵢ','j':'ⱼ','k':'ₖ','l':'ₗ','m':'ₘ','n':'ₙ',
-'o':'ₒ','p':'ₚ','r':'ᵣ','s':'ₛ','t':'ₜ','u':'ᵤ','v':'ᵥ','x':'ₓ'
+const superscripts = {
+  standard:{
+    'a':'ᵃ','b':'ᵇ','c':'ᶜ','d':'ᵈ','e':'ᵉ','f':'ᶠ','g':'ᵍ','h':'ʰ',
+    'i':'ⁱ','j':'ʲ','k':'ᵏ','l':'ˡ','m':'ᵐ','n':'ⁿ','o':'ᵒ','p':'ᵖ',
+    'r':'ʳ','s':'ˢ','t':'ᵗ','u':'ᵘ','v':'ᵛ','w':'ʷ','x':'ˣ','y':'ʸ','z':'ᶻ',
+    '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'
+  },
+  math:{
+    '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'
+  },
+  small:{
+    'a':'ᵃ','e':'ᵉ','i':'ⁱ','o':'ᵒ','u':'ᵘ','n':'ⁿ','r':'ʳ','s':'ˢ','t':'ᵗ'
+  }
 };
 
 function convert(){
-  const text=document.getElementById("input").value;
-  let map=mode==="sup"?supMap:subMap;
-  let out="";
-  for(let c of text){
-    out+=map[c]||c;
+  const text = document.getElementById("input").value;
+  const style = document.getElementById("style").value;
+  let out = "";
+
+  for (let c of text){
+    if(style === "random"){
+      const sets = Object.values(superscripts);
+      const set = sets[Math.floor(Math.random() * sets.length)];
+      out += set[c] || c;
+    } else {
+      out += superscripts[style][c] || c;
+    }
   }
-  document.getElementById("output").innerText=out;
+  document.getElementById("output").innerText = out;
 }
 
 function copyText(){
-  const text=document.getElementById("output").innerText;
-  if(text) navigator.clipboard.writeText(text);
+  const t = document.getElementById("output").innerText;
+  if(t) navigator.clipboard.writeText(t);
+}
+
+function clearAll(){
+  document.getElementById("input").value = "";
+  document.getElementById("output").innerText = "";
 }
 </script>
 
